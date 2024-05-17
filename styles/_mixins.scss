@@ -1,0 +1,23 @@
+@mixin displayFlex ($display, $ai, $jc) {
+    display: $display;
+    align-items: $ai;
+    justify-content: $jc;   
+}
+
+@mixin textStyle ($fF, $col, $fS, $lH, $fW, $lS, $tTr) {
+    font-family: $fF;
+    color: $col;
+    font-size: $fS;
+    line-height: $lH;
+    font-weight: $fW;
+    letter-spacing: $lS;
+    text-transform: $tTr;    
+}
+@mixin textStyle2 ($fF,  $fS, $fW, $lH, $col, $tTr) {
+    font-family: $fF;
+    font-size: $fS;
+    font-weight: $fW;
+    line-height: $lH;
+    color: $col;  
+    text-transform: $tTr;     
+}

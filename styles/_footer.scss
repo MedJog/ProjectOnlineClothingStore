@@ -1,0 +1,33 @@
+// footer
+.footer {
+    @include displayFlex(flex, center, space-between);
+    background-color: #e6e6e6;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.footer-right-text {
+    @include textStyle(Lato, #7a7a7a, 16px, 42px, 400, 0.025em, none);
+}
+.footer-left {
+    display: flex;
+    gap: 5px;
+}
+.social-media {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    background-color: $colorWhite;
+}
+.social-media__icons {
+    @include displayFlex(flex, center, center);
+}
+.social-media:hover {
+    background-color: $colorPink;
+}
+.social-media:hover 
+.social-media__icons path {
+    fill: $colorWhite;
+}

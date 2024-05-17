@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/shopping_cart_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Project Online Clothing Store</title>
+</head>
+<body>
+    <header class="header center">
+        <div class="header-upper">
+                <a class="header-upper__logo logo" href="./index.html">
+                    <img class="logo__img" src="./images/logo.png" alt="logo">
+                    <h2 class="logo__name">BRAN<span class="color-pink">D</span></h2>
+                </a>
+            <div class="header-upper__search">
+                <details class="drop-down">
+                    <summary class="button-browse">Browse
+                        <svg xmlns="http://www.w3.org/2000/svg" height="15" width="10" viewBox="0 0 320 512"><path fill="#838383" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                    </summary>
+                    <div class="megabox megabox_flex">
+                        <div class="megabox__item">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                    </div>
+                </details>
+                <div class="search">
+                    <input class="search__line" type="text" placeholder="Search for item">
+                    <div class="search__button">
+                        <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="26" height="38" viewBox="0 0 26 27"
+                            fill="none">
+                            <path
+                                d="M18.0589 17.6251C19.6705 15.865 20.6275 13.6039 20.769 11.2216C20.9106 8.83932 20.2281 6.48088 18.8362 4.54232C17.4443 2.60377 15.4278 1.20318 13.1252 0.575765C10.8227 -0.0516554 8.37437 0.132305 6.19143 1.09675C4.0085 2.0612 2.22389 3.74739 1.1373 5.87217C0.0507149 7.99695 -0.271678 10.4309 0.224264 12.7653C0.720206 15.0997 2.00428 17.1923 3.86085 18.6919C5.71741 20.1914 8.0334 21.0064 10.4199 21.0001C12.6723 21.0031 14.8638 20.2691 16.6599 18.9101L24.4079 26.7171C24.4934 26.8061 24.5958 26.8772 24.7091 26.9261C24.8225 26.9751 24.9444 27.0009 25.0679 27.0021C25.1916 27.0024 25.314 26.9773 25.4276 26.9283C25.5411 26.8793 25.6434 26.8074 25.7279 26.7171C25.9018 26.5362 25.999 26.295 25.999 26.0441C25.999 25.7931 25.9018 25.5519 25.7279 25.371L18.0589 17.6251ZM1.88589 10.5001C1.89873 8.81477 2.41021 7.17101 3.35586 5.776C4.30151 4.38098 5.63899 3.29715 7.1997 2.66114C8.76042 2.02513 10.4745 1.86542 12.1258 2.20213C13.7772 2.53884 15.2919 3.3569 16.479 4.55319C17.6661 5.74948 18.4725 7.27044 18.7965 8.92433C19.1204 10.5782 18.9475 12.291 18.2995 13.8468C17.6515 15.4026 16.5574 16.7316 15.1551 17.6665C13.7529 18.6014 12.1052 19.1002 10.4199 19.1C8.14843 19.0892 5.97409 18.1775 4.3741 16.5652C2.77412 14.9528 1.87924 12.7715 1.88589 10.5001Z"
+                                fill="#E8E8E8" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="header-upper__left">
+                <div class="basket">
+                    <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="32" height="29" viewBox="0 0 32 29"
+                        fill="none">
+                        <path
+                            d="M26.199 29C25.5512 28.9738 24.9396 28.6948 24.4952 28.2227C24.0509 27.7506 23.8094 27.1232 23.8225 26.475C23.8356 25.8269 24.1023 25.2097 24.5653 24.7559C25.0283 24.3022 25.6508 24.048 26.2991 24.048C26.9474 24.048 27.5697 24.3022 28.0327 24.7559C28.4957 25.2097 28.7624 25.8269 28.7755 26.475C28.7886 27.1232 28.5471 27.7506 28.1028 28.2227C27.6585 28.6948 27.0468 28.9738 26.399 29H26.199ZM6.75098 26.32C6.75098 25.79 6.90815 25.2718 7.20264 24.8311C7.49712 24.3904 7.91569 24.0469 8.4054 23.844C8.8951 23.6412 9.43399 23.5881 9.95386 23.6915C10.4737 23.7949 10.9512 24.0502 11.326 24.425C11.7009 24.7998 11.9562 25.2773 12.0596 25.7972C12.163 26.317 12.1098 26.8559 11.907 27.3456C11.7041 27.8353 11.3606 28.2539 10.9199 28.5483C10.4792 28.8428 9.96108 29 9.43103 29C9.07892 29.0003 8.73017 28.9311 8.40479 28.7966C8.0794 28.662 7.78374 28.4646 7.53467 28.2158C7.28559 27.9669 7.08805 27.6713 6.95325 27.3461C6.81844 27.0208 6.74902 26.6721 6.74902 26.32H6.75098ZM10.551 20.686C10.2916 20.6868 10.039 20.6024 9.83215 20.4457C9.62531 20.2891 9.47563 20.0689 9.40601 19.819L4.573 2.36401H1.18005C0.866568 2.36401 0.565906 2.23947 0.344238 2.01781C0.12257 1.79614 -0.00195312 1.49549 -0.00195312 1.18201C-0.00195312 0.868519 0.12257 0.567873 0.344238 0.346205C0.565906 0.124537 0.866568 5.81268e-06 1.18005 5.81268e-06H5.46106C5.72055 -0.00080736 5.97309 0.0837201 6.17981 0.240568C6.38653 0.397416 6.53589 0.617884 6.60498 0.868006L11.438 18.323H24.616L28.999 8.27501H14.399C14.2409 8.27961 14.0834 8.25242 13.9359 8.19507C13.7884 8.13771 13.6539 8.05134 13.5404 7.94108C13.4269 7.83082 13.3366 7.69891 13.275 7.55315C13.2134 7.40739 13.1816 7.25075 13.1816 7.0925C13.1816 6.93426 13.2134 6.77762 13.275 6.63186C13.3366 6.4861 13.4269 6.35419 13.5404 6.24393C13.6539 6.13367 13.7884 6.0473 13.9359 5.98994C14.0834 5.93259 14.2409 5.90541 14.399 5.91001H30.812C31.0077 5.90996 31.2003 5.95866 31.3724 6.05172C31.5446 6.14478 31.6908 6.27926 31.798 6.44301C31.9058 6.60729 31.9714 6.79569 31.9889 6.99145C32.0063 7.18721 31.9752 7.38424 31.8981 7.565L26.493 19.977C26.4007 20.1876 26.249 20.3668 26.0565 20.4927C25.864 20.6186 25.6391 20.6858 25.4091 20.686H10.551Z"
+                            fill="#222222"></path>
+                    </svg>
+                    <div class="drop-down-menu">
+                        <div class="card">
+                            <a href="./single_page.html" class="card__link">
+                                <img class="card__photo" src="./photo/basket_greenman.png" alt="greenman" srcset="">
+                                <div class="card__info">
+                                    <p class="card__title">Rebox Zane</p>
+                                    <img class="card__stars" src="./photo/stars.png" alt="product evaluetion" srcset="">
+                                    <p class="card__price">1 <span class="X-fontsize">x</span> $250</p>
+                                        
+                                </div>
+                                <img class="card__close" src="./photo/close.png" alt="close srcset=">
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="./single_page.html" class="card__link">
+                                <img class="card__photo" src="./photo/basket_whitewoomen.png" alt="whitewoomen" srcset="">
+                                <div class="card__info">
+                                    <p class="card__title">Rebox Zane</p>
+                                    <img class="card__stars" src="./photo/stars.png" alt="product evaluetion" srcset="">
+                                    <p class="card__price">1 <span class="X-fontsize">x</span> $250</p>
+                                        
+                                </div>
+                                <img class="card__close" src="./photo/close.png" alt="close srcset=">
+                            </a>
+                        </div>
+                        <div class="total-sum">
+                            <p class="total-sum__text">TOTAL</p>
+                            <p class="total-sum__text">$500.00</p>
+                        </div>
+                        <a class="button-link pink" href="./checkout.html">Checkout</a>
+                        <a class="button-link" href="./shopping_cart.html">Go to cart</a>
+                    </div>
+                </div>
+                <div class="button-account">My Account
+                    <svg class="arrow"xmlns="http://www.w3.org/2000/svg" height="15" width="10" viewBox="0 0 320 512"><path fill="#ffffff" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                </div>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__list"><a href="./product.html" class="nav-menu__link">Home</a></li>
+                <li class="nav-menu__list">
+                    <a href="#" class="nav-menu__link">Man</a>
+                    <div class="megabox megabox_nav megabox_position">
+                        <div class="megabox__item megabox__item_1">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item megabox__item_2">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class=" megabox__item megabox__item_3">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                        </div>
+                        <div class="megabox__item megabox__item_4">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class="megabox__img">
+                            <img class="megabox__photo" src="./photo/mega__img.png" alt="man" srcset="">
+                            <h3 class="megabox__txt">Super<br>
+                                sale!</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-menu__list"><a href="#" class="nav-menu__link">Women</a>
+                    <div class="megabox megabox_nav">
+                        <div class="megabox__item megabox__item_1">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item megabox__item_2">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class=" megabox__item megabox__item_3">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                        </div>
+                        <div class="megabox__item megabox__item_4">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class="megabox__img">
+                            <img class="megabox__photo" src="./photo/mega__img.png" alt="man" srcset="">
+                            <h3 class="megabox__txt">Super<br>
+                                sale!</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-menu__list"><a href="#" class="nav-menu__link">Kids</a>
+                    <div class="megabox megabox_nav">
+                        <div class="megabox__item megabox__item_1">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item megabox__item_2">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class=" megabox__item megabox__item_3">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                        </div>
+                        <div class="megabox__item megabox__item_4">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class="megabox__img">
+                            <img class="megabox__photo" src="./photo/mega__img.png" alt="man" srcset="">
+                            <h3 class="megabox__txt">Super<br>
+                                sale!</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-menu__list last"><a href="#" class="nav-menu__link">Accoseriese</a>
+                    <div class="megabox megabox_nav">
+                        <div class="megabox__item megabox__item_1">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item megabox__item_2">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class=" megabox__item megabox__item_3">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                        </div>
+                        <div class="megabox__item megabox__item_4">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class="megabox__img">
+                            <img class="megabox__photo" src="./photo/mega__img.png" alt="man" srcset="">
+                            <h3 class="megabox__txt">Super<br>
+                                sale!</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-menu__list last"><a href="#" class="nav-menu__link">Hot Deals</a>
+                    <div class="megabox megabox_nav">
+                        <div class="megabox__item megabox__item_1">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                            <a href="#" class="mega-link">Blazers</a>
+                            <a href="#" class="mega-link">Denim</a>
+                            <a href="#" class="mega-link">Leggings/Pants</a>
+                            <a href="#" class="mega-link">Skirts/Shorts</a>
+                            <a href="#" class="mega-link">Accessories</a>
+                        </div>
+                        <div class="megabox__item megabox__item_2">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class=" megabox__item megabox__item_3">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                        </div>
+                        <div class="megabox__item megabox__item_4">
+                            <h3 class="mega-title">man</h3>
+                            <a href="#" class="mega-link">Dresses</a>
+                            <a href="#" class="mega-link">Tops</a>
+                            <a href="#" class="mega-link">Sweaters/Knits</a>
+                            <a href="#" class="mega-link">Jackets/Coats</a>
+                        </div>
+                        <div class="megabox__img">
+                            <img class="megabox__photo" src="./photo/mega__img.png" alt="man" srcset="">
+                            <h3 class="megabox__txt">Super<br>
+                                sale!</h3>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="breadcrumbs center">
+        <h2 class="breadcrumbs__title">New Arrivals</h2>
+        <nav class="breadcrumbs__nav">
+            <ul class="breadcrumbs__ul">
+                <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">Home</a></li>
+                <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">Men</a></li>
+                <li class="breadcrumbs__li"><a href="#" class="breadcrumbs__link">New Arrivals</a></li>
+            </ul>  
+        </nav>
+    </section>
+    <section class="my-basket center">
+        <div class="my-goods center">
+            <div class="my-goods__headings">
+                <p class="my-goods__heading my-goods__heading_left">Product Details</p>
+                <p class="my-goods__heading">unitePrice</p>
+                <p class="my-goods__heading">Quantity</p>
+                <p class="my-goods__heading">shipping</p>
+                <p class="my-goods__heading">Subtotal</p>
+                <p class="my-goods__heading">ACTION</p>
+            </div>
+            <div class="my-goods__info">
+                <div class="my-goods__card">
+                    <a href="./single_page.html" class="my-goods__card-link">
+                        <img class="my-goods__card-photo" src="./photo_shopping_cart/man1.jpg" alt="greenman" srcset="">
+                        <div class="card__info">
+                            <p class="my-goods__card-title">Mango  People  T-shirt</p>
+                            <img class="my-goods__card-stars" src="./photo/stars.png" alt="product evaluetion" srcset="">
+                            <p class="my-goods__card-info">Color:<span class="my-goods__card-info1">Red</span></p>
+                            <p class="my-goods__card-info">Size:<span class="my-goods__card-info1">Xll</span></p>
+                        </div> 
+                    </a>
+                </div>
+                <p class="my-goods__add-info">$150</p>
+                <div class="my-goods__add-info ">
+                    <input class="my-goods__add-info-block" type="text" placeholder="2">
+                </div>
+                <p class="my-goods__add-info">FREE</p>
+                <p class="my-goods__add-info">$300</p>
+                <div class="my-goods__add-info"><img class="my-goods__card-close" src="./photo/close.png" alt="close" srcset></div>
+                
+            </div>
+            <div class="my-goods__info">
+                <div class="my-goods__card">
+                    <a href="./single_page.html" class="my-goods__card-link">
+                        <img class="my-goods__card-photo" src="./photo_shopping_cart/man2.jpg" alt="greenman" srcset="">
+                        <div class="card__info">
+                            <p class="my-goods__card-title">Mango  People  T-shirt</p>
+                            <img class="my-goods__card-stars" src="./photo/stars.png" alt="product evaluetion" srcset="">
+                            <p class="my-goods__card-info">Color:<span class="my-goods__card-info1">Red</span></p>
+                            <p class="my-goods__card-info">Size:<span class="my-goods__card-info1">Xll</span></p>
+                        </div> 
+                    </a>
+                </div>
+                <p class="my-goods__add-info">$150</p>
+                <div class="my-goods__add-info ">
+                    <input class="my-goods__add-info-block" type="text" placeholder="2">
+                </div>
+                <p class="my-goods__add-info">FREE</p>
+                <p class="my-goods__add-info">$300</p>
+                <div class="my-goods__add-info"><img class="my-goods__card-close" src="./photo/close.png" alt="close" srcset></div>
+            </div>
+            <div class="my-goods__info">
+                <div class="my-goods__card">
+                    <a href="./single_page.html" class="my-goods__card-link">
+                        <img class="my-goods__card-photo" src="./photo_shopping_cart/man3.jpg" alt="greenman" srcset="">
+                        <div class="card__info">
+                            <p class="my-goods__card-title">Mango  People  T-shirt</p>
+                            <img class="my-goods__card-stars" src="./photo/stars.png" alt="product evaluetion" srcset="">
+                            <p class="my-goods__card-info">Color:<span class="my-goods__card-info1">Red</span></p>
+                            <p class="my-goods__card-info">Size:<span class="my-goods__card-info1">Xll</span></p>
+                        </div> 
+                    </a>
+                </div>
+                <p class="my-goods__add-info">$150</p>
+                <div class="my-goods__add-info ">
+                    <input class="my-goods__add-info-block" type="text" placeholder="2">
+                </div>
+                <p class="my-goods__add-info">FREE</p>
+                <p class="my-goods__add-info">$300</p>
+                <div class="my-goods__add-info"><img class="my-goods__card-close" src="./photo/close.png" alt="close" srcset></div>
+            </div>
+        </div>
+        <div class="basket-buttons center">
+            <button class="busket-button">cLEAR SHOPPING CART</button>
+            <button class="busket-button">cONTINUE sHOPPING</button>
+        </div>
+        <div class="basket-checkout center">
+            <div class="basket-checkout__item">
+                <h3 class="basket-checkout__item-title title-1">Shipping Adress</h3>
+                <form class="basket-checkout__form" action="#">
+                    <select class="basket-checkout__form-field" name="name" id="">
+                        <option class="basket-checkout__form-name"value="s1" selected>Bangladesh</option>
+                        <option class="basket-checkout__form-name"value="s2" selected>USA</option>
+                        <option class="basket-checkout__form-name"value="s3" selected>China</option>
+                    </select><br>
+                    <input class="basket-checkout__form-field" type="text" placeholder="State" value=""><br>
+                    <input class="basket-checkout__form-button" type="submit" value="get a quote">
+                </form>
+            </div>
+            <div class="basket-checkout__item">
+                <h3 class="basket-checkout__item-title title-2">coupon  discount</h3>
+                <p class="basket-checkout__text">Enter your coupon code if you have one</p>
+                <form class="basket-checkout__form" action="#">
+                    <input class="basket-checkout__form-field" type="text" placeholder="State" value=""><br>
+                    <input class="basket-checkout__form-button" type="submit" value="Apply coupon">
+                </form>
+            </div>
+            <div class="basket-checkout__item item-3">
+                <p class="basket-checkout__item-text">Sub total<span class="price">$900</span></p>
+                <h3 class="basket-checkout__item-title title-3">GRAND TOTAL<span class="color-pink price">$900</span></h3>
+                <button class="basket-checkout__button">proceed to checkout</button>
+            </div>
+        </div> 
+    </section>
+    <section class="subscribe center">
+        <div class="subscribe__left">
+            <div class="subscribe__img"><img src="./images/subscribe_face.png" alt="women face" srcset="">
+            </div>
+            <div class="subscribe__info">
+                <p class="subscribe__info__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, 
+                    a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                <p class="subscribe__info__autor">Bin Burhan</p>
+                <p class="autor__black">Dhaka, Bd</p>
+                <div class="subscribe__info__lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe__right">
+            <h3 class="form__heading">Subscribe</h3>
+            <p class="form__text">FOR OUR NEWLETTER AND PROMOTION</p>
+            <form class="subscribe__email">
+                <input class="email" type="email" placeholder="Enter Your Email"name="" id="">
+                <div class="email__button">Subscribe</div>
+            </form>
+        </div>
+    </section>
+    <section class="information center">
+        <div class="information__brand">
+            <a class="logo" href="./index.html">
+                <img class="logo__img" src="./images/logo.png" alt="logo">
+                <h2 class="logo__name">BRAN<span class="color-pink">D</span></h2>
+            </a>
+            <p class="brand__text">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
+            <p class="brand__text">Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+        </div>
+        <div class="information__items">
+            <div class="information__item">
+                <h2 class="item__heading">COMPANY</h2>
+                <a class="item__link" href="#">Home</a> 
+                <a class="item__link" href="#">Shop</a>
+                <a class="item__link" href="#">About</a>
+                <a class="item__link" href="#">How It Works</a>
+                <a class="item__link" href="#">Contact</a>
+            </div>
+            <div class="information__item">
+                <h2 class="item__heading">INFORMATION</h2>
+                <a class="item__link" href="#">Tearms & Condition</a> 
+                <a class="item__link" href="#">Privacy Policy</a>
+                <a class="item__link" href="#">How to Buy</a>
+                <a class="item__link" href="#">How to Sell</a>
+                <a class="item__link" href="#">Promotion</a>
+            </div>
+            <div class="information__item">
+                <h2 class="item__heading">SHOP CATEGORY</h2>
+                <a class="item__link" href="#">Men</a>
+                <a class="item__link" href="#">Women</a>
+                <a class="item__link" href="#">Child</a>
+                <a class="item__link" href="#">Apparel</a>
+                <a class="item__link" href="#">Brows All</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer center">
+    <div class="footer-right">
+        <p class="footer-right-text">© 2017  Brand  All Rights Reserved.</p>
+    </div>
+    <div class="footer-left">
+        <!-- facebook -->
+        <div class="social-media">
+            <a href="#">
+                <svg class="social-media__icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="-50,40,400,150"
+                style="fill:#b2b2b2;">
+                <g fill="#b2b2b2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M17.525,9h-3.525v-2c0,-1.032 0.084,-1.682 1.563,-1.682h1.868v-3.18c-0.909,-0.094 -1.823,-0.14 -2.738,-0.138c-2.713,0 -4.693,1.657 -4.693,4.699v2.301h-3v4l3,-0.001v9.001h4v-9.003l3.066,-0.001z"></path></g></g>
+                </svg>
+            </a></div>
+            <!-- twitter -->
+        <div class="social-media"><a href="#">
+            <svg class="social-media__icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="-50,40,400,150"
+            style="fill:#b2b2b2;">
+            <g fill="#b2b2b2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M21.634,4.031c-0.815,0.385 -2.202,1.107 -2.899,1.245c-0.027,0.007 -0.049,0.016 -0.075,0.023c-0.813,-0.802 -1.927,-1.299 -3.16,-1.299c-2.485,0 -4.5,2.015 -4.5,4.5c0,0.131 -0.011,0.372 0,0.5c-3.218,0 -5.568,-1.679 -7.327,-3.837c-0.235,-0.29 -0.485,-0.139 -0.537,0.067c-0.117,0.466 -0.157,1.245 -0.157,1.801c0,1.401 1.095,2.777 2.8,3.63c-0.314,0.081 -0.66,0.139 -1.02,0.139c-0.424,0 -0.912,-0.111 -1.339,-0.335c-0.158,-0.083 -0.499,-0.06 -0.398,0.344c0.405,1.619 2.253,2.756 3.904,3.087c-0.375,0.221 -1.175,0.176 -1.543,0.176c-0.136,0 -0.609,-0.032 -0.915,-0.07c-0.279,-0.034 -0.708,0.038 -0.349,0.582c0.771,1.167 2.515,1.9 4.016,1.928c-1.382,1.084 -3.642,1.48 -5.807,1.48c-0.438,-0.01 -0.416,0.489 -0.063,0.674c1.597,0.838 4.213,1.334 6.082,1.334c7.43,0 11.653,-5.663 11.653,-11.001c0,-0.086 -0.002,-0.266 -0.005,-0.447c0,-0.018 0.005,-0.035 0.005,-0.053c0,-0.027 -0.008,-0.053 -0.008,-0.08c-0.003,-0.136 -0.006,-0.263 -0.009,-0.329c0.589,-0.425 1.491,-1.163 1.947,-1.728c0.155,-0.192 0.03,-0.425 -0.181,-0.352c-0.543,0.189 -1.482,0.555 -2.07,0.625c1.177,-0.779 1.759,-1.457 2.259,-2.21c0.171,-0.257 -0.043,-0.518 -0.304,-0.394z"></path></g></g>
+            </svg></a>
+            </div>
+            <!-- linkedin -->
+        <div class="social-media">
+            <a href="#">
+                <svg class="social-media__icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="00px" width="30" height="30" viewBox="-50,40,400,150"
+                style="fill:#b2b2b2;">
+                <g fill="#b2b2b2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M24,4h-18c-1.105,0 -2,0.895 -2,2v18c0,1.105 0.895,2 2,2h18c1.105,0 2,-0.895 2,-2v-18c0,-1.105 -0.895,-2 -2,-2zM10.954,22h-2.95v-9.492h2.95zM9.449,11.151c-0.951,0 -1.72,-0.771 -1.72,-1.72c0,-0.949 0.77,-1.719 1.72,-1.719c0.948,0 1.719,0.771 1.719,1.719c0,0.949 -0.771,1.72 -1.719,1.72zM22.004,22h-2.948v-4.616c0,-1.101 -0.02,-2.517 -1.533,-2.517c-1.535,0 -1.771,1.199 -1.771,2.437v4.696h-2.948v-9.492h2.83v1.297h0.04c0.394,-0.746 1.356,-1.533 2.791,-1.533c2.987,0 3.539,1.966 3.539,4.522z"></path></g></g>
+                </svg></a>
+        </div>
+        <!-- pinterest -->
+        <div class="social-media">
+            <a href="#">
+                <svg class="social-media__icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="-50,40,400,150"
+                style="fill:#b2b2b2;">
+                <g fill="#b2b2b2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M16.09375,4c-5.077,0 -10.09375,3.38333 -10.09375,8.86133c0,3.483 1.95848,5.46289 3.14648,5.46289c0.49,0 0.77344,-1.36595 0.77344,-1.75195c0,-0.46 -1.17383,-1.44047 -1.17383,-3.35547c0,-3.978 3.02827,-6.79688 6.94727,-6.79688c3.37,0 5.86328,1.91364 5.86328,5.43164c0,2.627 -1.05475,7.55469 -4.46875,7.55469c-1.232,0 -2.28516,-0.89002 -2.28516,-2.16602c0,-1.87 1.19727,-3.68133 1.19727,-5.61133c0,-3.276 -4.53711,-2.68166 -4.53711,1.27734c0,0.831 0.10361,1.75081 0.47461,2.50781c-0.682,2.939 -1.9375,7.62334 -1.9375,10.65234c0,0.935 0.13366,1.85502 0.22266,2.79102c0.168,0.188 0.0848,0.16822 0.3418,0.07422c2.494,-3.414 2.26263,-4.38747 3.39063,-8.85547c0.609,1.158 2.18269,1.78125 3.42969,1.78125c5.255,0 7.61523,-5.12128 7.61523,-9.73828c0,-4.913 -4.24525,-8.11914 -8.90625,-8.11914z"></path></g></g>
+                </svg></a>   
+        </div>
+            <!-- google -->
+        <div class="social-media">
+            <a href="https://www.google.co.uk/">
+                <svg class="social-media__icons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="-50,40,400,150"
+                style="fill:#b2b2b2;">
+                <g fill="#b2b2b2" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M17.1875,10.9375c-7.76562,0 -14.0625,6.29688 -14.0625,14.0625c0,7.76563 6.29688,14.0625 14.0625,14.0625c7.76563,0 14.0625,-6.29687 14.0625,-14.0625c0,-0.96484 -0.10547,-1.90625 -0.28906,-2.8125l-0.07812,-0.3125h-13.69531v4.6875h9.375c-0.74609,4.43359 -4.73047,7.8125 -9.375,7.8125c-5.17969,0 -9.375,-4.19531 -9.375,-9.375c0,-5.17969 4.19531,-9.375 9.375,-9.375c2.34375,0 4.48047,0.86719 6.125,2.28906l3.35938,-3.28906c-2.5,-2.28906 -5.82812,-3.6875 -9.48437,-3.6875zM39.0625,17.1875v4.6875h-4.6875v3.125h4.6875v4.6875h3.125v-4.6875h4.6875v-3.125h-4.6875v-4.6875z"></path></g></g>
+                </svg>
+            </a>
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+@import 'vars';
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-style: normal, italic;
+}
+.center {
+    padding-right: calc(50% - 1140px/2);
+    padding-left: calc(50% - 1140px/2);
+}
+// styles for header
+@import 'header';
+
+//styles for section breadcrumbs
+@import 'breadcrumbs';
+//styles for section basket
+.my-basket {
+    padding-top: 90px;
+    padding-bottom: 80px;
+}
+.my-goods {
+    &__headings {
+        display: grid;
+        grid-template-columns: 30% 1Fr 1Fr 1Fr 1Fr 1Fr;
+        border-bottom: 1px solid #eaeaea;
+    }
+    &__heading {
+        display: flex;
+        justify-content: center;
+        @include textStyle(Lato, #222222, 13px, 20px, 700, -0.015em, uppercase);
+        margin-bottom: 20px;
+    }
+    &__heading_left {
+        display: flex;
+        justify-content: start;
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: 30% 1Fr 1Fr 1Fr 1Fr 1Fr;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    &__card-link {
+        display: flex;
+        padding: 10px;
+        gap: 32px;
+    }
+    &__card-title {
+        @include textStyle2 (Lato,  13px, 600, 1.2, #222222, uppercase);
+        margin-bottom: 11px;
+    }
+    &__card-stars {
+        margin-bottom: 15px;
+    }
+    &__card-info {
+        @include textStyle2 (Lato,  13px, 400, 20px, #575757, none);
+        margin-bottom: 5px;
+    }
+    &__card-info1 {
+        font-weight: 300;
+        color: #6f6e6e;
+
+    }
+    &__add-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include textStyle2 (Lato,  13px, 400, 20px, #656565, none);
+    }
+    &__add-info-block {
+        width: 54px;
+        height: 30px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+       // padding: 10px 25px;
+        text-align: center;
+    }
+    &__card:hover {
+        box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
+
+    }
+    
+
+}
+.basket-buttons {
+    @include displayFlex (flex, center, space-between);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.busket-button {
+    @include textStyle2 (Lato,  14px, 700, 1.2, #4a4a4a, uppercase);
+    width: 235px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+.busket-button:hover {
+    border: 3px solid #e6e6e6;
+}
+
+// styles for checkout
+.basket-checkout {
+    display: flex;
+    justify-content: space-between;
+}
+.basket-checkout__item-title {
+    @include textStyle2 (Lato,  16px, 700, 1.2, #222222, uppercase);
+}
+.basket-checkout__form-field {
+    width: 355px;
+    height: 45px;
+    background-color: $colorWhite;
+    border: 1px solid #eaeaea;
+    @include textStyle2 (Lato,  13px, 300, 1.2, #b1b1b1, none);
+    margin-bottom: 20px;
+}
+.basket-checkout__form-button {
+    width: 100px;
+    height: 35px;
+    background-color: $colorWhite;
+    border: 1px solid #eaeaea;
+    @include textStyle2 (Lato,  11px, 700, 1.2, #4a4a4a, uppercase);
+}
+.basket-checkout__form-button:hover {
+    border: 3px solid #e6e6e6;
+}
+.item-3 {
+    background-color: #f5f3f3;
+    padding: 40px;
+}
+.basket-checkout__text {
+    @include textStyle2 (Lato,  14px, 300, 1.2, #000000, none);
+    margin-bottom: 24px;
+}
+.basket-checkout__item-text {
+    @include textStyle2 (Lato,  11px, 400, 1.2, #4a4a4a, uppercase);
+    text-align: end;
+    margin-bottom: 20px;
+}
+.basket-checkout__button {
+    width: 273px;
+    height: 50px;
+    background-color: $colorPink;
+    border: none;
+    @include textStyle2 (Lato,  16px, 700, 1.2, $colorWhite, uppercase);
+}
+.basket-checkout__button:hover {
+    border: 1px solid $colorPink;
+    background-color: $colorWhite;
+    color: $colorPink;
+
+}
+.price {
+    margin-left: 20px;
+}
+.title-1 {
+    margin-bottom: 22px;
+}
+.title-2 {
+    margin-bottom: 28px;
+}
+.title-3 {
+    text-align: end;
+    margin-bottom: 40px;
+}
+
+//section subscribe
+@import 'subscribe';
+
+// section information
+@import 'information';
+
+// footer
+@import 'footer';

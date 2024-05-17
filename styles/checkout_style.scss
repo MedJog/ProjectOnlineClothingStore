@@ -1,0 +1,155 @@
+@import 'vars';
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-style: normal, italic;
+}
+.center {
+    padding-right: calc(50% - 1140px/2);
+    padding-left: calc(50% - 1140px/2);
+}
+// styles for header
+@import 'header';
+
+//styles for section breadcrumbs
+@import 'breadcrumbs';
+
+// styles for checkout
+.checkout {
+    padding-top: 89px;
+    padding-bottom: 93px;
+}
+summary {
+    display: block;
+    }
+summary::-webkit-details-marker {
+    display: none;
+}
+.checkout-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.checkout-item-name {
+    @include textStyle2 (Lato, 16px, 700, 1.2, #222222, uppercase);
+}
+.checkout-item-number {
+    padding-right: 10px;
+}
+.registration {
+    padding-top: 39px;
+    padding-bottom: 79px;
+    display: flex;
+    gap: 293px;
+        &__heading {
+            @include textStyle2 (Lato, 13px, 400, 1.2, #222222, uppercase);
+        }
+        &__text {
+            @include textStyle2 (Lato, 13px, 400, 20px, #b3b2b2, none);
+        }
+        &__text1 {
+            margin-bottom: 34px;
+        }
+        &__text2 {
+            margin-bottom: 33px;
+        }
+        &__text3 {
+            margin-bottom: 38px;
+        }
+        &__symbol {
+            padding-right: 5px;
+        }
+        &__button {
+            @include displayFlex(flex, center, center);
+            width: 180px;
+            height: 50px;
+            background-color: #ffffff;
+            border: 1px solid #eaeaea;
+            @include textStyle2 (Lato, 14px, 700, 1.2, #4a4a4a, uppercase);
+        }
+        &__button:hover {
+            border: 2px solid #eaeaea;
+        }
+        &__link:hover {
+            width: 180px;
+            height: 50px;
+            border: 2px solid #eaeaea;
+
+        }
+        
+}
+// styles for flag 
+.registration__choice {
+    display: block;
+    margin-bottom: 20px;
+    @include textStyle2 (Lato, 12px, 400, 1.2, #222222, uppercase);
+}
+.registration__choice input { 
+    display: none; /* Прячем исходный переключатель */
+}
+.registration__flag {
+    position: relative; /* Относительное позиционирование */
+    display: inline-block; /* Строчно-блочный элемент */
+    align-items: center;
+    width: 10px; height: 10px; /* Размеры */
+    background: $colorWhite; /* Цвет фона */
+    border-radius: 50%; /* Круглый переключатель */
+    border:1px solid black;
+    margin-right: 14px;
+}
+.registration__choice input:checked + span { 
+    background: $colorWhite; /* цвет фона */
+    border-color: black;
+} 
+.registration__choice input:checked + span::before {  /* Добавляем точку по центру */
+    content: '';
+    position: absolute;
+    background: black;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+}
+// styles for form
+.registration__name {
+    @include textStyle2 (Lato, 12px, 400, 20px, #222222, none);
+}
+.color-red {
+    color: #ff0d0d;
+}
+.registration__field {
+    width: 390px;
+    height: 45px;
+    margin-bottom: 20px;
+    background-color: $colorWhite;
+    border: 1px solid #eaeaea;
+}
+.registration__name::after {
+    content: ' *';
+    color: #ff0d0d;
+}
+
+.registration__buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.registration__link {
+    border: none;
+    background-color: #ffffff;
+    @include textStyle2 (Lato, 14px, 400, 20px, #222222, none);
+}
+//section subscribe
+@import 'subscribe';
+
+// section information
+@import 'information';
+
+// footer
+@import 'footer';

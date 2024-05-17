@@ -1,0 +1,30 @@
+//styles for section breadcrumbs
+.breadcrumbs {
+    @include displayFlex (flex, center, space-between);
+    background-color: #f8f3f4;
+    padding-top: 65px;
+    padding-bottom: 65px;   
+}
+.breadcrumbs__title {
+    @include textStyle2 (Lato, 24px, 900, 20px, $colorPink, uppercase);
+}
+.breadcrumbs__ul {
+    display: flex;
+    list-style-type: none;
+}
+.breadcrumbs__li:not(:last-child):after {
+    content: '/';
+    padding-left: 8px;
+    padding-right: 8px;
+    @include textStyle2 (Lato, 14px, 300, 20px, #636363, uppercase);
+}
+.breadcrumbs__li:last-child .breadcrumbs__link {
+    font-weight: 700;
+    color: $colorPink;
+}
+.breadcrumbs__link {
+    @include textStyle2 (Lato, 14px, 300, 20px, #636363, uppercase);
+}
+.breadcrumbs__link:hover {
+    text-decoration: underline;
+}

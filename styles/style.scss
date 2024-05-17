@@ -1,0 +1,255 @@
+@import 'vars';
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-style: normal, italic;
+}
+.center {
+    padding-right: calc(50% - 1140px/2);
+    padding-left: calc(50% - 1140px/2);
+}
+// styles for header
+@import 'header';
+
+// style for brand
+.brand {
+    height: 613px;
+    background-color: #e8e8e8;
+    margin-bottom: 100px;
+    &__img {
+        background-image: url(/images/image_brand.png);
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
+    }
+    &__heading {
+        display: inline-block;
+        border-left: 12px solid $colorPink;
+        padding-left: 16px;
+        margin-top: 220px;
+        margin-bottom: 290px;
+    }
+    &__heading-1 {
+        @include textStyle( Lato, #222222, 60px, normal, 900, 0.025em, none); 
+    }
+    &__heading-2 {
+        font-size: 40px;
+    }
+}
+     
+// style for categories
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 100px;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__item {
+        display: block;
+        position: relative;
+    }
+    &__item:hover {
+        box-shadow: 1px 1px 5px rgb(50, 49, 49);
+        transform: scale(1.0);
+    }
+    &__item-photo {
+       width: 100%;
+       height: 100%;
+    }
+    &__item-title {
+        position: absolute;
+        z-index: 1;
+        top: 25px;
+        left: 0;
+        background-color: $colorWhite;
+    }
+    &__title-black {
+        @include textStyle( Lato, #222222, 18px, 1.2, 900, 0.025em, uppercase);
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    &__title-pink {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: $colorPink;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+// section popular
+.popular__information {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px; 
+    &__heading {
+        @include textStyle (Lato, #222222, 30px, 54px, 700, 0.025em, none);   
+    }   
+    &__text {
+        @include textStyle (Lato, #9f9f9f, 14px, 54px, 400, 0.025em, none); 
+    } 
+}
+
+// fallback for  popular products
+.popular__products {
+    text-align: justify; 
+}
+.popular__products::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.product-card {
+    display: table-cell;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;  
+    width: 260px; 
+    margin-bottom: 20px;
+}
+@supports (display: flex) {
+    .popular__products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-bottom: 80px;
+        }
+        // product-card
+        .product-card {
+            position: relative;
+            display: block;  
+            width: 260px; 
+        } 
+}
+
+.product-card__info {
+    padding: 20px;
+}
+.product-card__price {
+    @include textStyle2 (Lato,  16px, 700, 1.2, $colorPink, uppercase);
+}
+.product-card__heading {
+    @include textStyle(Lato, #222222, 13px, 1.2, 400, 0.025em, uppercase);
+    margin-bottom: 16px;
+}
+.product-card__add-basket {
+    position: absolute;
+    top: 98px;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    pointer-events: none;   
+}
+.product-card__add-button {
+    @include displayFlex (flex, center, center);
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid $colorWhite;
+    border-bottom: 1px solid $colorWhite;
+    pointer-events: all;
+    @include textStyle2 (Lato,  13px, 700, 1.2, $colorWhite, none);
+}
+.product-card:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
+}
+.product-card:hover .product-card__photo {
+    filter: brightness(30%);
+}
+.product-card:hover .product-card__add-basket {
+    display: flex;
+}
+
+.popular__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 112px;    
+}
+.popular__button-product {
+    @include displayFlex(flex, center, center);
+    gap: 10px;
+    border: none;
+    width: 212px;
+    height: 48px;
+    background-color: $colorPink;
+    @include textStyle (Lato, $colorWhite, 16px, 54px, 700, 0.025em, none);
+} 
+.popular__button-product:hover {
+    color: $colorPink;
+    background-color: $colorWhite;
+    border: 1px solid $colorPink;
+} 
+.popular__button-product:hover .arrow-right path {
+    fill: $colorPink;
+}
+
+// section addition
+.addition {
+    display: flex;
+    margin-bottom: 100px;
+}
+.addition__left {
+    position: relative;   
+}
+.addition__left__photo {
+    width: 100%;
+    height: 100%;
+}
+.addition__left__info {
+    position: absolute;
+    top: 153px;
+    left: 40px;
+}
+.info__title_1 {
+    @include textStyle(Lato, $colorWhite, 53.7px, 1.2, 700, 0.025em, none);
+}
+.info__title_2 {
+    font-size: 32.2px;
+    color: $colorWhite;
+}
+.addition__right {
+    background-color: #222224;
+    width: 33%;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+.addition__right__info {
+    display: flex;
+    gap: 40px;
+}
+.block__info__title {
+    @include textStyle (Lato, #fbfbfb, 20px, 1.2, 700, 0.025em, none);
+    margin-bottom: 15px;
+}
+.block__info__text {
+    @include textStyle(Lato, #fbfbfb, 14px, 24px, 300, 0.025em, none);
+    margin-bottom: 65px;
+}
+//section subscribe
+@import 'subscribe';
+
+// section information
+@import 'information';
+
+// footer
+@import 'footer';
+
+
+
+
+
+    
